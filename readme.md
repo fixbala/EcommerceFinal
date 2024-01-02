@@ -25,4 +25,4 @@ Este proyecto es un ecommerce de venta y compra de productos, desarrollado como 
 
 1. Clona este repositorio en tu máquina local.
    
-   git clone https://github.com/tuusuario/https://github.com/fixbala/EcommerceFinal.git
+   git clone https://github.com/fixbala/EcommerceFinal.git
