@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spring Boot WebSocket Chat Application | CalliCoder</title>
+    <link rel="stylesheet" href="/resources/css/main.css" />
+    <h:outputScript library="js" name="main.js"/>
+    <h:outputScript library="js" name="js2.js"/>
+    <h:outputScript library="js" name="jsSockets1.js"/>
+</head>
+<body background="18.jpg"
+      style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+
+<div id="username-page">
+    <div class="username-page-container">
+        <span style="font-size: 1.7em">Hola #{seguridadBean.usuarioSesion.nombre}</span>
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <input style="dis" value="#{seguridadBean.usuarioSesion.nombre}" type="text" id="name" placeholder="chatear como"
+                       autocomplete="off" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">Iniciar Chat</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="chat-page" class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>UNISHOP</h2>
+        </div>
+        <div class="connecting">Connecting...</div>
+        <ul id="messageArea">
+
+        </ul>
+        <form id="messageForm" name="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="mensaje"
+                           autocomplete="off" class="form-control" />
+                    <button type="submit" class="primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
